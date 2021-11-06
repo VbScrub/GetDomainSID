@@ -29,3 +29,7 @@ Example:
 `GetDomainSid.exe mydomain.local 10.10.14.30 SomeUser SomePassword`
 
 Note: If you want this to use Kerberos authentication then ensure you use the FQDN of a DC instead of its IP address. Also include the full domain name with the username (e.g "mydomain.local\UserA" instead of just "UserA")
+
+## How does it work?
+
+It searches LDAP for any user account and for the first one it finds it grabs the SID from them and trims off the RID part, just leaving the domain SID 
