@@ -6,7 +6,7 @@ A simple command line utility that gets the SID from a domain when you're runnin
 
 ## Why make this tool?
 
-The domain SID is often needed for various Kerberos related attacks but if you google how to get it you'll mostly just find powershell exampels that don't work if you're not a member of the domain. Of course if you have a shell as a domain user then you can run `whoami /user` and strip the last part off the SID it shows you, but this tool is for when you don't have such a shell and only have credentials. 
+The domain SID is often needed for various Kerberos related attacks but if you google how to get it you'll mostly just find powershell examples that don't work if you're not a member of the domain. Of course if you have a shell as a domain user then you can run `whoami /user` and strip the last part off the SID it shows you, but this tool is for when you don't have such a shell and only have credentials. 
 
 ## Usage
 
@@ -32,4 +32,4 @@ Note: If you want this to use Kerberos authentication then ensure you use the FQ
 
 ## How does it work?
 
-It searches LDAP for any user account and for the first one it finds it grabs the SID from them and trims off the RID part, just leaving the domain SID 
+It searches LDAP for any user accounts and for the first one it finds grabs the SID from them and trims off the RID part, just leaving the domain SID 
